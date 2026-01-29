@@ -14,10 +14,10 @@ import androidx.compose.material3.Button
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
-import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -35,17 +35,20 @@ fun HomeScreen(
     onMovieClicked: (movie: Movie) -> Unit
 ) {
     Scaffold(
-        topBar = {
-            TopAppBar(title = { Text("Recherche de Films") })
-        }
+        modifier = modifier.fillMaxSize()
     ) { paddingValues ->
         Column(
-            modifier = modifier
+            modifier = Modifier
                 .fillMaxSize()
                 .padding(paddingValues)
                 .padding(16.dp),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
+            Text(
+                text = "Recherche de Films",
+                style = MaterialTheme.typography.headlineLarge
+            )
+
             Spacer(modifier = Modifier.height(100.dp))
 
             // Section de recherche
@@ -93,6 +96,7 @@ fun HomeScreenPreview() {
         Movie("2", "The Dark Knight", 2008, "Christian Bale, Heath Ledger", null, 5)
     )
     HomeScreen(
+        modifier = Modifier.fillMaxSize(),
         state = HomeState(movies = sampleMovies, isLoading = false, searchText = "Batman"),
         onEvent = {},
         onMovieClicked = {},
