@@ -20,6 +20,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Ping"
+rootProject.name = "Movie"
 include(":app")
  
