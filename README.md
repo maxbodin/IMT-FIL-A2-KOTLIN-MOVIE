@@ -1,6 +1,6 @@
-# FIL-A2-KOTLIN-MOVIE
+# IMT-FIL-A2-KOTLIN-MOVIE
 
-A modern Android application built with Kotlin and Jetpack Compose that allows users to search for movies using a REST API. This project demonstrates a clean, scalable architecture using MVVI, Repository pattern, and modern Android development tools.
+Modern Android application built with Kotlin and Jetpack Compose that allows users to search for movies using a REST API. This project demonstrates a clean, scalable architecture using MVI, Repository pattern, and modern Android development tools.
 
 | Search Screen                           | Details Screen                            |
 |-----------------------------------------|-------------------------------------------|
